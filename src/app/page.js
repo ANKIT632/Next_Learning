@@ -8,6 +8,12 @@ export default function Home() {
   return (
     <main >
       <button onClick={()=>route.push('/about')}>about</button>
+      
+      <hr/>
+      <button onClick={()=>route.push('/StudentList')}>Student List</button>
+
+      <hr/>
+      <button onClick={()=>route.push('/productList')}>productList</button>
 
 
     </main>
