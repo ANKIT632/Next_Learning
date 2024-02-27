@@ -1,23 +1,31 @@
-'use client'
+
 
 import Link from "next/link";
-import { useEffect, useState } from "react"
 
-function Page() {
+// server component
 
-    const [product,setProdeuct]=useState([]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect( ()=>{
-        async function data(){
+async function getData(){
+    try{
+       let data= await fetch('https://dummyjson.com/products');
+   
+           data=await data.json();
+      
+       return data.products;
+   
+   
+           }
+           
+           catch{
+               console.log('not data fetch')
+           }  
+       }
 
-    let data= await fetch('https://dummyjson.com/products');
 
-        data=await data.json();
-    
-        console.log(data.products);
-    setProdeuct(data.products);
-        } data();
-    },[]);
+
+async function  Page() {
+
+   
+  let product=await getData();
 
   return (
     <>
