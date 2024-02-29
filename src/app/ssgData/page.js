@@ -9,7 +9,9 @@ export default async function Page() {
 
         <> 
          {data.map((user) => ( <div key={user.id}>
-         <Link href={`/ssgData/${user.id}`}> {user.name}</Link>
+         <Link href={`/ssgData/${user.id}`}> {user.name}</Link> 
+          
+         <Link href={`/ssgData/${user.id}/update`}><p>[update]</p></Link>
          <hr/>
         </div> ))}
         </>

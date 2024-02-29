@@ -13,7 +13,6 @@ async function page(props) {
       <h4>User Details :</h4>
        <p>name : {user.name}</p>
        <p>email : {user.email}</p>
-       <p>adress : {user.address.street}</p>
     </div>
   )
 }

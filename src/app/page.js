@@ -23,6 +23,9 @@ export default function Home() {
       <hr/>
       <button onClick={()=>route.push('/envSetup')}>env</button>
 
+      <hr/>
+      <button onClick={()=>route.push('/ssgData')}>ssgData</button>
+
     </main>
   );
 }
