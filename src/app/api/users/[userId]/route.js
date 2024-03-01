@@ -26,7 +26,14 @@ export async function PUT(req,id){
 
   return NextResponse.json({mess:'data is updated',success:true},{status:200});
     
+}
 
-     
+
+// Delete data 
+
+export async function DELETE(req,param){
+
+    console.log(param);
+    return NextResponse.json({results:'delete success',success:true},{status:200})
 
 }
