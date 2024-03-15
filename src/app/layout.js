@@ -2,6 +2,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Providers } from "./redux/provider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,7 +23,10 @@ export default function RootLayout({ children }) {
   
       <body className={inter.className}>
       <h3>Practice Next</h3>
-      {children}</body>
+      <Providers>
+      {children}
+      </Providers>
+      </body>
     </html>
   );
 }

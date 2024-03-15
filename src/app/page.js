@@ -1,6 +1,8 @@
 'use client'
 
+import AddUser from './component/addUser';
 
+import DisplayUser from './component/displayUser';
 import style from './style.module.css';
 
 import { useRouter } from "next/navigation";
@@ -26,6 +28,8 @@ export default function Home() {
       <hr/>
       <button onClick={()=>route.push('/ssgData')}>ssgData</button>
 
+   <AddUser/>
+   <DisplayUser/>
     </main>
   );
 }

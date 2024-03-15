@@ -26,10 +26,10 @@ export async function POST(request){
   const payload=await request.json();
   try{
     await mongoose.connect("mongodb://localhost:27017/e-comm");
-  console.log(payload);
+
     let product =new Product(payload);
 
-   results=await product.save(product);
+   results=await product.save();
 
    return  NextResponse.json({results,success:true},{status:200});
   }
