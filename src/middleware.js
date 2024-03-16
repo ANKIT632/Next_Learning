@@ -6,7 +6,7 @@ export function middleware(request) {
     return NextResponse.redirect(new URL('/StudentList',request.url));
   }
 }
-
+  
 // if not use if statement then bydefault redirect to studentList by matcher path.
 
 // export const config={
